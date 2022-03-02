@@ -115,8 +115,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-          appBarTheme: AppBarTheme(color: Colors.blueAccent.shade400)),
+      theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.white24)),
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
@@ -131,8 +130,12 @@ class _MyAppState extends State<MyApp> {
                 _loadingAnucio = false;
                 loadImage();
               },
+              labelColor: Colors.blue,
             ),
-            title: Text('Calendario UPS'),
+            title: Text(
+              'Calendario UPS',
+              style: TextStyle(color: Colors.blue),
+            ),
           ),
           body: TabBarView(
             children: [
